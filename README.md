@@ -37,7 +37,7 @@ php bin/console doctrine:migrations:migrate
 
 Page d'accueil du projet http://127.0.0.1:8000/  
 
-Page d'accueil phpmyadmin http://127.0.0.1:8080
+Page d'accueil phpmyadmin http://127.0.0.1:8080   (user:root , psw:root)
 
 ## Contributing
 
