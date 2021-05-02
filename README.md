@@ -12,7 +12,7 @@ Aller dans votre répertoire de travail
 ```bash
 git clone https://github.com/democvidev/Symfony5.2_PHP7.3_Basic.git
 
-cd TestDocker/
+cd Symfony5.2_PHP7.3_Basic/
 
 docker-compose up
 
