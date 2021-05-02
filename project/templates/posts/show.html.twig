@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+    <h1>Posts</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr>
+                <th>Post_title</th>
+                <td>{{ post.postTitle }}</td>
+            </tr>
+            <tr>
+                <th>Post_slug</th>
+                <td>{{ post.postSlug }}</td>
+            </tr>
+            <tr>
+                <th>Post_content</th>
+                <td>{{ post.postContent }}</td>
+            </tr>
+            <tr>
+                <th>Post_image</th>
+                <td>{{ post.postImage }}</td>
+            </tr>
+            <tr>
+                <th>Post_created_at</th>
+                <td>{{ post.postCreatedAt ? post.postCreatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Post_updated_at</th>
+                <td>{{ post.postUpdatedAt ? post.postUpdatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('posts_index') }}">back to list</a>
+
+    <a href="{{ path('posts_edit', {'id': post.id}) }}">edit</a>
+
+    {{ include('posts/_delete_form.html.twig') }}
+{% endblock %}
